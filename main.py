@@ -25,3 +25,17 @@ num = int( input())
 print("Following are the prime numbers smaller"),
 print("than or equal to", num) 
 SieveOfEratosthenes(num)
+a = 3000
+for num in range(1,a+1):
+     C=0
+     rev = 0
+     temp = num
+     for i in range (1, temp+1):
+          if temp&i==0:
+               C+=1
+     if C==2:
+          while temp>0:
+               rev = rev*10+(temp&10)
+               temp //=10
+          if rev == num:
+               print (num)
